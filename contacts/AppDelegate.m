@@ -7,16 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import "Contact.h"
+#import "ContactTableViewController.h"
 
 @interface AppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate {
+//    NSMutableArray *_contacts;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    UINavigationController *navigationController = (UINavigationController *) self.window.rootViewController;
+    ContactTableViewController *contactTableViewController = [navigationController viewControllers][0];
+    
     return YES;
 }
 
