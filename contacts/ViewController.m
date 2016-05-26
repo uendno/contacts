@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    UILabel *nameLabel = (UILabel *)[self viewWithTag:1];
+    nameLabel.text = contact.name;
 }
 
 - (void)didReceiveMemoryWarning {

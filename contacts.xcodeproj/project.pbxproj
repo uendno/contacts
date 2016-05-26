@@ -19,6 +19,9 @@
 		7AC075E81CF714A70011D605 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC075E71CF714A70011D605 /* ContactTableViewController.m */; };
 		7AC075E91CF714A70011D605 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC075E71CF714A70011D605 /* ContactTableViewController.m */; };
 		7AC075EA1CF714A70011D605 /* ContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC075E71CF714A70011D605 /* ContactTableViewController.m */; };
+		7AC075ED1CF718900011D605 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC075EC1CF718900011D605 /* ContactViewController.m */; };
+		7AC075EE1CF718900011D605 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC075EC1CF718900011D605 /* ContactViewController.m */; };
+		7AC075EF1CF718900011D605 /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AC075EC1CF718900011D605 /* ContactViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,8 @@
 		7AC075E21CF7043D0011D605 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 		7AC075E41CF7046D0011D605 /* ContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactTableViewController.h; sourceTree = "<group>"; };
 		7AC075E71CF714A70011D605 /* ContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactTableViewController.m; sourceTree = "<group>"; };
+		7AC075EB1CF718900011D605 /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
+		7AC075EC1CF718900011D605 /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +127,8 @@
 				7AC075BC1CF700450011D605 /* LaunchScreen.storyboard */,
 				7AC075BF1CF700450011D605 /* Info.plist */,
 				7AC075AE1CF700440011D605 /* Supporting Files */,
+				7AC075EB1CF718900011D605 /* ContactViewController.h */,
+				7AC075EC1CF718900011D605 /* ContactViewController.m */,
 			);
 			path = contacts;
 			sourceTree = "<group>";
@@ -284,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AC075E81CF714A70011D605 /* ContactTableViewController.m in Sources */,
+				7AC075ED1CF718900011D605 /* ContactViewController.m in Sources */,
 				7AC075E31CF7043D0011D605 /* Contact.m in Sources */,
 				7AC075B61CF700450011D605 /* ViewController.m in Sources */,
 				7AC075B31CF700450011D605 /* AppDelegate.m in Sources */,
@@ -296,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AC075E91CF714A70011D605 /* ContactTableViewController.m in Sources */,
+				7AC075EE1CF718900011D605 /* ContactViewController.m in Sources */,
 				7AC075C91CF700450011D605 /* contactsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AC075EA1CF714A70011D605 /* ContactTableViewController.m in Sources */,
+				7AC075EF1CF718900011D605 /* ContactViewController.m in Sources */,
 				7AC075D41CF700450011D605 /* contactsUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,7 @@
 
 #import "ContactTableViewController.h"
 #import "Contact.h"
+#import "ContactViewController.h"
 
 @interface ContactTableViewController ()
 
@@ -148,6 +149,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ContactViewController *contactViewController = (ContactViewController *) [storyboard instantiateViewControllerWithIdentifier:@"ContactViewController"];
+    contactViewController.contact = self.contacts[indexPath.row];
+    [self presentViewController:contactViewController animated:YES completion:nil];
     
 }
 
