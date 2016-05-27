@@ -10,7 +10,9 @@
 #import "Contact.h"
 #import "ContactViewController.h"
 
-@interface ContactTableViewController ()
+@interface ContactTableViewController () {
+    Contact *_contact;
+}
 
 @end
 
@@ -38,88 +40,105 @@
 - (void)configDataContact{
     _contacts = [[NSMutableArray alloc] init];
     
+    //image path
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"avatar" ofType:@"gif"];
+    
     Contact *contact = [[Contact alloc] init];
     contact.name = @"Thang1";
     contact.phoneNumber = @"0944740463";
     contact.address = @"Coma 18";
+    contact.image = [NSData dataWithContentsOfFile:filePath];
     [_contacts addObject:contact];
     
     contact = [[Contact alloc] init];
     contact.name = @"Thang2";
     contact.phoneNumber = @"0944740463";
     contact.address = @"Coma 18";
+    contact.image = [NSData dataWithContentsOfFile:filePath];
     [_contacts addObject:contact];
     
     contact = [[Contact alloc] init];
     contact.name = @"Thang3";
     contact.phoneNumber = @"0944740463";
     contact.address = @"Coma 18";
+    contact.image = [NSData dataWithContentsOfFile:filePath];
     [_contacts addObject:contact];
     
     contact = [[Contact alloc] init];
     contact.name = @"Thang4";
     contact.phoneNumber = @"0944740463";
     contact.address = @"Coma 18";
+    contact.image = [NSData dataWithContentsOfFile:filePath];
     [_contacts addObject:contact];
     
     contact = [[Contact alloc] init];
     contact.name = @"Thang5";
     contact.phoneNumber = @"0944740463";
     contact.address = @"Coma 18";
+    contact.image = [NSData dataWithContentsOfFile:filePath];
     [_contacts addObject:contact];
     
     contact = [[Contact alloc] init];
     contact.name = @"Thang6";
     contact.phoneNumber = @"0944740463";
     contact.address = @"Coma 18";
+    contact.image = [NSData dataWithContentsOfFile:filePath];
     [_contacts addObject:contact];
     
     contact = [[Contact alloc] init];
     contact.name = @"Thang7";
     contact.phoneNumber = @"0944740463";
     contact.address = @"Coma 18";
+    contact.image = [NSData dataWithContentsOfFile:filePath];
     [_contacts addObject:contact];
     
     contact = [[Contact alloc] init];
     contact.name = @"Thang8";
     contact.phoneNumber = @"0944740463";
     contact.address = @"Coma 18";
+    contact.image = [NSData dataWithContentsOfFile:filePath];
     [_contacts addObject:contact];
     
     contact = [[Contact alloc] init];
     contact.name = @"Thang9";
     contact.phoneNumber = @"0944740463";
     contact.address = @"Coma 18";
+    contact.image = [NSData dataWithContentsOfFile:filePath];
     [_contacts addObject:contact];
     
     contact = [[Contact alloc] init];
     contact.name = @"Thang10";
     contact.phoneNumber = @"0944740463";
     contact.address = @"Coma 18";
+    contact.image = [NSData dataWithContentsOfFile:filePath];
     [_contacts addObject:contact];
     
     contact = [[Contact alloc] init];
     contact.name = @"Thang11";
     contact.phoneNumber = @"0944740463";
     contact.address = @"Coma 18";
+    contact.image = [NSData dataWithContentsOfFile:filePath];
     [_contacts addObject:contact];
     
     contact = [[Contact alloc] init];
     contact.name = @"Thang12";
     contact.phoneNumber = @"0944740463";
     contact.address = @"Coma 18";
+    contact.image = [NSData dataWithContentsOfFile:filePath];
     [_contacts addObject:contact];
     
     contact = [[Contact alloc] init];
     contact.name = @"Thang13";
     contact.phoneNumber = @"0944740463";
     contact.address = @"Coma 18";
+    contact.image = [NSData dataWithContentsOfFile:filePath];
     [_contacts addObject:contact];
     
     contact = [[Contact alloc] init];
     contact.name = @"Thang14";
     contact.phoneNumber = @"0944740463";
     contact.address = @"Coma 18";
+    contact.image = [NSData dataWithContentsOfFile:filePath];
     [_contacts addObject:contact];
 }
 
@@ -143,17 +162,26 @@
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:101];
     nameLabel.text = contact.name;
     
+    cell.imageView.image = [UIImage imageWithData:contact.image];
+    
     // Configure the cell...
     
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    ContactViewController *contactViewController = (ContactViewController *) [storyboard instantiateViewControllerWithIdentifier:@"ContactViewController"];
-    contactViewController.contact = self.contacts[indexPath.row];
-    [self presentViewController:contactViewController animated:YES completion:nil];
     
+    //set current contact
+    _contact = self.contacts[indexPath.row];
+    //perform segue
+    [self performSegueWithIdentifier:@"ShowContact" sender:self];
+
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.destinationViewController isKindOfClass:[ContactViewController class]]) {
+        ((ContactViewController *)segue.destinationViewController).contact = _contact;
+    }
 }
 
 

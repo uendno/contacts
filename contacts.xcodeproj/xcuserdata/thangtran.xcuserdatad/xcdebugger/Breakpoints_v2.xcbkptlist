@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "contacts/ContactTableViewController.m"
-            timestampString = "485956389.808748"
+            timestampString = "486026798.668998"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "-configDataContact"
             landmarkType = "5">
          </BreakpointContent>

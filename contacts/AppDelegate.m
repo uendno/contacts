@@ -21,10 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    
-    UINavigationController *navigationController = (UINavigationController *) self.window.rootViewController;
-    ContactTableViewController *contactTableViewController = [navigationController viewControllers][0];
+
     
     return YES;
 }

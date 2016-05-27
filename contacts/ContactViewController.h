@@ -7,7 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "Contact.h"
 
 @interface ContactViewController : ViewController
+
+@property (nonatomic) Contact *contact;
+@property (nonatomic) IBOutlet UILabel *phoneNumberLabel;
+@property (nonatomic) IBOutlet UILabel *addressLabel;
+@property (nonatomic) IBOutlet UIImageView *image;
 
 @end

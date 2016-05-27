@@ -10,40 +10,43 @@
             <objects>
                 <tableViewController storyboardIdentifier="ContactTableViewController" id="l41-hO-4og" customClass="ContactTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="EO4-Nv-68I">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ContactCell" id="jkW-do-WfH">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ContactCell" id="jkW-do-WfH">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jkW-do-WfH" id="xLv-pe-u0a">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a8q-WK-7fA">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <variation key="widthClass=compact" fixedFrame="YES">
+                                                <rect key="frame" x="15" y="3" width="53" height="37"/>
+                                            </variation>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHy-y5-7Ln">
                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="98" y="11" width="294" height="21"/>
+                                                <rect key="frame" x="96" y="11" width="294" height="21"/>
                                             </variation>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a8q-WK-7fA">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                            <variation key="widthClass=compact" fixedFrame="YES">
-                                                <rect key="frame" x="16" y="3" width="53" height="37"/>
-                                            </variation>
-                                        </imageView>
                                     </subviews>
                                     <variation key="default">
                                         <mask key="subviews">
-                                            <exclude reference="WHy-y5-7Ln"/>
                                             <exclude reference="a8q-WK-7fA"/>
+                                            <exclude reference="WHy-y5-7Ln"/>
                                         </mask>
                                     </variation>
                                     <variation key="widthClass=compact">
                                         <mask key="subviews">
-                                            <include reference="WHy-y5-7Ln"/>
                                             <include reference="a8q-WK-7fA"/>
+                                            <include reference="WHy-y5-7Ln"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
@@ -55,12 +58,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Contacts" id="qgN-p0-OjK"/>
+                    <connections>
+                        <segue destination="Hje-77-aJN" kind="show" identifier="ShowContact" id="byj-4A-jVp"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQK-Q5-Y0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="580.5" y="253"/>
+            <point key="canvasLocation" x="-493.5" y="251"/>
         </scene>
-        <!--Contact View Controller-->
+        <!--Name-->
         <scene sceneID="Ftt-sq-xMs">
             <objects>
                 <viewController storyboardIdentifier="ContactViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hje-77-aJN" customClass="ContactViewController" sceneMemberID="viewController">
@@ -69,24 +75,16 @@
                         <viewControllerLayoutGuide type="bottom" id="pYv-TR-Ekd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="nAX-d4-udN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuF-J9-0Kv">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="38" y="102" width="200" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PhoneNumber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W0O-B8-1RF">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="38" y="170" width="200" height="21"/>
+                                    <rect key="frame" x="172" y="151" width="200" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVA-QK-6XL">
@@ -95,30 +93,64 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="38" y="243" width="200" height="21"/>
+                                    <rect key="frame" x="172" y="214" width="200" height="21"/>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QI5-Rv-Nw6">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="172" y="127" width="112" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEo-as-lsq">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="172" y="185" width="47" height="21"/>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JO3-so-app">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="27" y="127" width="116" height="116"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="MuF-J9-0Kv"/>
                                 <exclude reference="W0O-B8-1RF"/>
                                 <exclude reference="VVA-QK-6XL"/>
+                                <exclude reference="QI5-Rv-Nw6"/>
+                                <exclude reference="PEo-as-lsq"/>
+                                <exclude reference="JO3-so-app"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="MuF-J9-0Kv"/>
                                 <include reference="W0O-B8-1RF"/>
                                 <include reference="VVA-QK-6XL"/>
+                                <include reference="QI5-Rv-Nw6"/>
+                                <include reference="PEo-as-lsq"/>
+                                <include reference="JO3-so-app"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" title="Name" prompt="Contact" id="HZp-Zn-zcu"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="VVA-QK-6XL" id="zNc-zi-dVc"/>
+                        <outlet property="image" destination="JO3-so-app" id="aCK-8X-2d2"/>
+                        <outlet property="phoneNumberLabel" destination="W0O-B8-1RF" id="Vxc-rL-zxN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5FX-Em-18H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1305" y="305"/>
+            <point key="canvasLocation" x="214.5" y="251"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IRN-9I-NzO">
@@ -134,7 +166,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nKK-yZ-lgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-328.5" y="223"/>
+            <point key="canvasLocation" x="-1291.5" y="251"/>
         </scene>
     </scenes>
 </document>

@@ -17,6 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = self.contact.name;
+    self.addressLabel.text = self.contact.address;
+    self.phoneNumberLabel.text = self.contact.phoneNumber;
+    self.image.image = [UIImage imageWithData:self.contact.image];
 }
 
 - (void)didReceiveMemoryWarning {
